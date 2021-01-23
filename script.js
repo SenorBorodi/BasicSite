@@ -4,6 +4,19 @@ function light(aw){
      else 
         document.getElementById('lumina').src="Images/Bec Gif.gif";
 }
+const navbar = () => {
+    const burger = document.querySelector('.menu-buton');
+    const nav = document.querySelector('.navigation');
+    const navLinks = document.querySelectorAll('.link');
+
+    //menu-button
+
+    burger.addEventListener('click', () => {
+        nav.classList.toggle('navigation-active');
+    });
+}
+navbar();
+
 function GetImage(){
     var age = document.getElementById("age").value;
 
@@ -70,13 +83,13 @@ function game(){
     var cxy = cxx.getContext("2d");
 
     function drawScore() {
-        cxy.font = "60px arial";
+        cxy.font = "45px arial";
         cxy.fillStyle = "black";
         cxy.rect(0,0,20000,30000);
         cxy.fillStyle = "black";
         cxy.fill();
         cxy.fillStyle = "white";
-        cxy.fillText("Score: "+ score, 30, 90);
+        cxy.fillText("Score: "+ score, 18, 85);
     }
 
     document.addEventListener("keydown", function(evt){
@@ -317,13 +330,13 @@ function GameMadeByMe(){
     var cxy = cxx.getContext("2d");
 
     function drawScore() {
-        cxy.font = "60px arial";
+        cxy.font = "45px arial";
         cxy.fillStyle = "black";
         cxy.rect(0,0,20000,30000);
         cxy.fillStyle = "black";
         cxy.fill();
         cxy.fillStyle = "white";
-        cxy.fillText("Score: "+ score, 30, 90);
+        cxy.fillText("Score: "+ score, 18, 85);
     }
 
     function draw() {
@@ -364,3 +377,5 @@ function GameMadeByMe(){
     
     var interval = setInterval(draw, 10);
 }
+
+/*https://developer.mozilla.org/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field#setting_up_the_brick_variables*/
