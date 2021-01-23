@@ -7,21 +7,24 @@
     <link rel = "stylesheet" href="style.css"/>
 </head>
 <body>
+
+    <div>
     <div class = "container" id = "navbar">
 
-        <a href = "index.html"><img src = "Images/Logo.png" alt = "B&B" class = "logo";></a>
-
-        <nav id = "navigation">
+        <a href = "index.html"><img src = "Images/Logo.png" alt = "B&B" class = "logo"></a>
+        <img src = "Images/menu-buton.png" class ="menu-buton" onclick="navbar()">
+        <nav class = "navigation">
             <ul>
-                <li><a href = "index.html">Home</a></li>
-                <li><a href = "Game.html">Let's Play</a></li></a>
-                <li> <a href = "Page.html">info</a></li>
+                <li class = "lii"><a href = "HowOldAreYou.html" class = "link">How Old Are You?</a></li>
+                <li class = "lii"><a href = "Game.html" class = "link">Let's Play</a></li></a>
+                <li class = "lii"> <a href = "Page.html" class = "link">info</a></li>
             </ul>
+            
         </nav>
     </div>
 
     <div class = "placeholder">
-        <p class = "DisplayAge">Your Age:
+        <p class = "ceva">Your Age:
 
             <input type = "text" id = "age" class = "old" placeholder="Enter Age:">
             <input type = "submit" class = "old" onclick="age(); GetImage();"><br/><br/>
@@ -60,7 +63,7 @@
         <a href = "https://www.facebook.com/borodi.bogdan/"> <img class = "smedia" src = "https://www.facebook.com/images/fb_icon_325x325.png" alt = "facebook"> </a>
     
     </div>
-
+</div>
     <script src="script.js"></script>
 
 </body>
