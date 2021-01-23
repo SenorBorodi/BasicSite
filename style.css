@@ -202,6 +202,9 @@ nav a:hover::before{
     }
 }
 @media screen and (max-width:768px){
+    .navigation{
+        display: none;
+    }
     .mobile{
         margin-top: 300px;
     }
@@ -273,6 +276,7 @@ nav a:hover::before{
     }
 }
 .navigation-active{
+    display: inline-block;
     transform: translateX(0%);
 }
 #buton{
