@@ -11,29 +11,32 @@
 
     <div class = "container" id = "navbar">
 
-        <a href = "index.html"><img src = "Images/Logo.png" alt = "B&B" class = "logo";></a>
-
-        <nav id = "navigation">
+        <a href = "index.html"><img src = "Images/Logo.png" alt = "B&B" class = "logo"></a>
+        <img src = "Images/menu-buton.png" class ="menu-buton" onclick="navbar()">
+        <nav class = "navigation">
             <ul>
-                <li><a href = "HowOldAreYou.html">How Old Are You?</a></li>
-                <li><a href = "Game.html">Let's Play</a></li>
-                <li> <a href = "index.html">Home</a></li>
+                <li class = "lii"><a href = "HowOldAreYou.html" class = "link">How Old Are You?</a></li>
+                <li class = "lii"><a href = "Game.html" class = "link">Let's Play</a></li></a>
+                <li class = "lii"> <a href = "Page.html" class = "link">info</a></li>
             </ul>
+            
         </nav>
+
     </div>
 
-    <h2 style="color:white; text-align: center;">
+    <h2 style="color:white; text-align: center;" class = "mobile">
         <br/>Salut, prietene!<br/>Eu sunt Bogdan si aceasta este o pagina facute mine:D<br/>
-        Cu ajutorul <strong style="color:rgba(60, 255, 11, 0.685);">W3Schools</strong>, <strong style="color:rgba(60, 255, 11, 0.685)">
-            StackOverflow</strong > si un <strong style="color:rgba(60, 255, 11, 0.685)">site random</strong> de pe care am luat codul de la Snake
-                + <strong style = "color: red;"> YOUTUBE </strong>.       
+        Cu ajutorul <a href = "https://www.w3schools.com/html/" target = "_blank" style="color:rgba(60, 255, 11, 0.685); text-decoration: none;"><strong>W3Schools</strong></a></strong>,
+         <a href = "https://stackoverflow.com/strong" style="color:rgba(60, 255, 11, 0.685); text-decoration: none;" target = "_blank">
+            StackOverflow</strong ></a> si un <strong>site random</strong> de pe care am luat codul de la Snake
+                + <a href="https://www.youtube.com/?gl=RO&hl=ro" target = "_blank" style = "text-decoration:none"><strong style = "color: red;"> YOUTUBE </strong></a>    
     </h2>  
 
     <h1 style="color:white; text-align: center; margin-top:30px">Cateva poze cu mine:</h1><br/><br/>
   
     <div id = "photo">
         <img src = "Images/BobFrumosul.png" class = "eu">
-        <img src = "Images/Colaj.jpg" class = "poza" style = "width: 700px;">
+        <img src = "Images/Colaj.jpg" class = "poza">
         <img src = "Images/Cu fratele.jpg" class = "poza">
     </div>
    
@@ -46,8 +49,8 @@
     <div class = "becu">
                 
         <img id = "lumina"src = "Images/NuGif.png"><br/>
-        <button type="button" onclick="light(1)" style="background:transparent; color: turquoise; border : 2px solid; font-size: 20px; border-radius: 20px;">Dilau</button>
-        <button type="button" onclick="light(0)" style="background: transparent; color: turquoise; border : 2px solid; font-size: 20px; border-radius: 20px;">Potolit</button>
+        <button type="button" onclick="light(1)" style="background:transparent; color: rgb(61, 139, 202);  border : 2px solid; font-size: 20px; border-radius: 20px;">Linistit</button>
+        <button type="button" onclick="light(0)" style="background: transparent; color: rgb(61, 139, 202); border : 2px solid; font-size: 20px; border-radius: 20px;">Nebun</button>
     
     </div>
 
