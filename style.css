@@ -2,7 +2,6 @@
     margin:0px;
 }
 div.parte_cedry2k {
-    background-image: url("Images/Background");
     height: 700px;
 }
 body{
@@ -23,13 +22,12 @@ body{
     font-style:italic;
     text-align: center;
     color: rgb(255, 255, 255);
-    transition: all 0.5s ease-out;
 }
-#bossul::hover{
-    margin-top: 100px;
-    background-color: rgb(255, 255, 255);
+#bossul:hover{
+    transition: 550ms;
+    opacity: 0.7;
+    font-size: 130px;
 }
-
 p{
     color:rgb(255, 255, 255);
     font-family:Helvetica;
@@ -40,20 +38,33 @@ p{
     font-family:Helvetica;
 }
 .logo{
+    transition: 0.70s;
+    -webkit-transition: 0.90s;
+    -moz-transition: 0.90s;
+    -ms-transition: 0.90s;
+    -o-transition: 0.90s;
+    display: block;
     width: 100px;
     height: 58px;
     float: left;
     margin-top: 3px;
     margin-left: 3px; 
-    transition: all 0.5s ease-out;
 }
-.logo::hover{
-    background-color: white;
+.logo:hover{
+    transition: 0.90s;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+     transform: rotate(45deg);
+    transform: rotate(360deg);
 }
 
 .smedia{
     height: 120px;
     width: 120px;
+    border-radius: 20px;
+}
+.smedia:hover{
+    opacity: 0.8;
 }
 button{
     background-color: dodgerblue;
@@ -61,11 +72,13 @@ button{
     height : 40px;
 }
 .container{
+    z-index:1;
     top: 0;
     height: 64px; 
     border-bottom: 4px solid rgb(245, 245, 245);
-    background-color: black;
-    position: sticky;
+    background-image: url("Images/navbar.jpg");
+    position:sticky;
+ 
 }
 header ::after{
     content:'';
@@ -76,7 +89,7 @@ nav{
     float: right;
 }
 nav ul{
-    margin-right: 100px;
+    margin-right: 30px;
     padding: 0;
     list-style: none;
 }
@@ -111,25 +124,169 @@ nav a::before{
 nav a:hover::before{
     width: 80%;
 }
-#myCanvas{
-    display: block;
-    margin: auto;
-    margin-top:40px;
-    width: 900px;
-    height: 570px;
-    background-color:black;
-    border: 5px solid white; 
+.menu-buton{
+    width: 50px; 
+    float: right; 
+    margin-top: 10px;
+    opacity: 0;
+}
+#GameCanvas{
+    width: 54%;
+    height: 70%;
+    margin-top: 3%;
+    background-color: black;
+    border: white 5px solid;
+    position: absolute;   
+    left: 430px;
+}
+#ScoreCanvas{
+    margin-top: 15px;
+    width: 8%;
+    height: 8%;
+    background-color: black;
+    border: white 5px solid;
+    position: absolute;   
+    left: 0%;  
+}
+.sorry{
+    color: white;
+    display: none;
+    text-align: center
+}
+.sorry2{
+    display: none;
+}
+.poza{
+    height: 600px;
+    width: 500px;
+    border: 3px solid white;
+}
+.eu{
+    height: 600px;
+    border: 3px solid white;
+}
+@media screen and (max-width:1092px){
+
+    nav li{
+        display:inline-block;
+        padding: 15px;
+        margin-left: 40px;
+        position: relative;
+    }
+    .sorry{
+        display: inline;
+        font-size: 120%;
+        color: white;     
+    }
+    .sorry2{
+        display: block;
+        margin-left: 10%;
+    }
+    #bossul{
+        font-size: 83px;
+    }
+    #bossul:hover{
+        transition: 550ms;
+        opacity: 0.7;
+        font-size: 93px;
+    }
+    #GameCanvas{
+        display: none;
+    }
+    #ScoreCanvas{
+        display: none;
+    }
+    
+    .playb{
+        display: none;
+    }
+}
+@media screen and (max-width:768px){
+    .mobile{
+        margin-top: 300px;
+    }
+    .vid{
+        height: 300px;
+        width: 400px;
+    }
+    .link{
+        color: white;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 18px;
+        font-family: cursive;
+        right: 0;
+        align-items: center;   
+        opacity: 1;
+    }
+   nav a:hover{
+       opacity: 0.8;
+   }
+   .ceva{
+    margin-top: 300px;
+}
+   body{
+    overflow-x: hidden;
+    }
+    .lii{     
+        right: 0;
+        background-image: url("Images/navbar.jpg");
+        top:64px;
+        border: white solid;
+        width: 100%;
+        height: 10vh;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    nav a:hover{
+        opacity: 0.8;
+    }
+    .navigation{
+        position: relative;
+        transform: translateX(110%);
+        transition: ease-in 0.5s;
+        
+    }
+    #bossul{
+        font-size: 70px;
+    }
+    #bossul:hover{
+        transition: 550ms;
+        opacity: 0.7;
+        font-size: 80px;
+    }
+    nav a:hover::before{
+        width: 0%;
+    }
+    .menu-buton{
+        cursor: pointer;
+        opacity: 1;
+    }
+    .poza{
+        height: 500px;
+        width: 400px;
+        border: 3px solid white;
+    }
+    .eu{
+        height: 500px;
+    }
+}
+.navigation-active{
+    transform: translateX(0%);
 }
 #buton{
     width: 220px;
     height: 60px;
 }
+
 .playb{
     background-color: white;
     font-size: 20px;
+    margin-top: 40px;
+    margin-left: 30px;
+    width: 15%;
     font-family: sans-serif;
-    margin-top: 23px;
-    margin-left: 20px;
     border-radius: 20px;
     background: transparent;
     color: white;
@@ -137,6 +294,7 @@ nav a:hover::before{
 }
 body{
     background-image: url("Images/Background.jpg");
+    background-size:cover;
 }
 .gamescreen{
     height: 50px;
@@ -148,22 +306,11 @@ canvas{
     margin-right: auto;
     margin-left: auto;
 }
-#ScoreCanvas{
-    display: block;
-    margin-top: 40px;
-    margin-left: 130px;
-    margin-right: auto;
-    width: 120px;
-    height: 50px;
-    background-color:black;
-    border: 5px solid white; 
-}
-
 .prima_parte{
     height: 1268px;
-    background-image: url("Images/Background.jpg");
 }
 .becu{
+    justify-content: center;
     text-align: center;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -202,10 +349,7 @@ canvas{
     width: 260px;
     font-size: 25px;
     margin-top: 14px;
-}
-.eu{
-    height: 700px;
-    border: 3px solid white;
+    border-radius: 20px;
 }
 .text{
     font-style: italic;
@@ -217,23 +361,8 @@ canvas{
     margin-top: 60px;
     text-align: center;
 }
-.poza{
-    height: 700px;
-    width: 600px;
-    border: 3px solid white;
-}
-
 #photo{
     display: block;
     margin-left: 20px;
     text-align: center;
-}
-#GameCanvas{
-    display: block;
-    margin-left: auto;
-    margin-top:40px;
-    width: 900px;
-    height: 570px;
-    background-color:black;
-    border: 5px solid white; 
 }
