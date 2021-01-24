@@ -60,6 +60,7 @@ function age(){
 }
 var running = 0;
 var bounce = 0;
+
 function game(){
     if(bounce == 1)
         return
@@ -220,9 +221,10 @@ function game(){
     requestAnimationFrame(main);
 }
 function GameMadeByMe(){
-    if(running)
+    if(running || bounce)
         return;
     bounce = 1;
+
     var canvas = document.getElementById("GameCanvas");
     var ctx = canvas.getContext("2d");
     var ballRadius = 6;
@@ -385,5 +387,5 @@ function GameMadeByMe(){
         y += dy;
     }
     
-    var interval = setInterval(draw, 10);
+    var interval = setInterval(draw, 15);
 }
