@@ -1,8 +1,69 @@
 *{
     margin:0px;
 }
+
 div.parte_cedry2k {
     height: 700px;
+}
+.animation img{
+    width: 50px;
+    opacity: 0;
+    animation: animation 7s linear infinite;
+}
+.animation{
+    z-index: -1;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    bottom: 0;
+}
+@keyframes animation{
+    0%{
+        transform: translateY(0);
+        opacity:0;
+    }
+    50%{
+        opacity:1;
+    }
+    70%{
+        opacity:1;
+    }
+    100%{
+        transform: translateY(-80vh);
+        opacity:0;
+    }
+}
+.animation img:nth-child(1){
+    animation-delay: 2s;
+    width: 35px;
+}
+.animation img:nth-child(2){
+    animation-delay: 1s;
+    width: 35px;
+}
+.animation img:nth-child(3){
+    animation-delay: 3s;
+    width: 25px;
+}
+.animation img:nth-child(4){
+    animation-delay: 4.5s;
+}
+.animation img:nth-child(5){
+    animation-delay: 3s;
+    width: 45px;
+}
+.animation img:nth-child(6){
+    animation-delay: 6s;
+    width: 20px;
+}
+.animation img:nth-child(7){
+    animation-delay: 7s;
+}
+.animation img:nth-child(8){
+    width: 35px;
+    animation-delay: 9s;
 }
 body{
     margin:0px;
@@ -15,7 +76,15 @@ body{
     border: 5px solid white;
 
 }
+.old{
+    height: 40px;
+    width: 260px;
+    font-size: 25px;
+    margin-top: 14px;
+    border-radius: 20px;
+}
 #bossul{
+    z-index: 10;
     font-size: 100px;
     margin-top: 280px;
     font-family: Verdana;
@@ -59,8 +128,9 @@ p{
 }
 
 .smedia{
-    height: 120px;
-    width: 120px;
+    bottom: 0%;
+    height: 60px;
+    width: 60px;
     border-radius: 20px;
 }
 .smedia:hover{
@@ -87,6 +157,9 @@ header ::after{
 }
 nav{
     float: right;
+}
+.info{
+    font-size: 23px;
 }
 nav ul{
     margin-right: 30px;
@@ -166,12 +239,18 @@ nav a:hover::before{
     border: 3px solid white;
 }
 @media screen and (max-width:1092px){
-
+    
+    nav ul{
+        margin-right: 0px;
+    }
     nav li{
         display:inline-block;
         padding: 15px;
-        margin-left: 40px;
-        position: relative;
+        top:0px;
+        margin-left: 30px;
+    }
+    nav a{
+        font-size:17px;
     }
     .sorry{
         display: inline;
@@ -181,6 +260,7 @@ nav a:hover::before{
     .sorry2{
         display: block;
         margin-left: 10%;
+        margin-right: 10%;
     }
     #bossul{
         font-size: 83px;
@@ -201,22 +281,50 @@ nav a:hover::before{
         display: none;
     }
 }
+#varsta{
+    height: 300px;
+    width: 400px;
+}
+.info{
+    margin-left: 10px;
+    margin-right: 10px;
+}
 @media screen and (max-width:768px){
     .navigation{
         display: none;
     }
-    .mobile{
-        margin-top: 300px;
+    .info{
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 17px;
     }
     .vid{
-        height: 300px;
-        width: 400px;
+        height: 200px;
+        width: 340px;
+    }
+    .DisplayAge{
+        font-size: 25px;
+    }
+    #varsta{
+        width: 300px;
+        height: 200px;
+    }
+    .old{
+        height: 25px;
+        width: 150px;
+        font-size: 15px;
+        margin-top: 14px;
+        border-radius: 20px;
+    }
+    .smedia{
+        height: 40px;
+        width: 40px;
     }
     .link{
         color: white;
         text-decoration: none;
         text-transform: uppercase;
-        font-size: 18px;
+        font-size: 15px;
         font-family: cursive;
         right: 0;
         align-items: center;   
@@ -225,9 +333,6 @@ nav a:hover::before{
    nav a:hover{
        opacity: 0.8;
    }
-   .ceva{
-    margin-top: 300px;
-}
    body{
     overflow-x: hidden;
     }
@@ -246,12 +351,12 @@ nav a:hover::before{
         opacity: 0.8;
     }
     .navigation{
-        position: relative;
-        transform: translateX(110%);
-        transition: ease-in 0.5s;
+        transform: translateX(100%);
+        transition: ease-in 1.5s;
         
     }
     #bossul{
+        justify-self: center;
         font-size: 70px;
     }
     #bossul:hover{
@@ -267,17 +372,20 @@ nav a:hover::before{
         opacity: 1;
     }
     .poza{
-        height: 500px;
-        width: 400px;
+        height: 350px;
+        width: 250px;
         border: 3px solid white;
     }
     .eu{
-        height: 500px;
+        height: 350px;
+        width: 250px;
     }
 }
 .navigation-active{
-    display: inline-block;
-    transform: translateX(0%);
+    position:absolute;
+    right: 50px;
+    display: block;
+    transform: translateX(-7.5%);
 }
 #buton{
     width: 220px;
@@ -310,6 +418,13 @@ canvas{
     margin-right: auto;
     margin-left: auto;
 }
+.links{
+    bottom: 0%;
+    position: absolute;
+}
+.links{
+    justify-content: center;
+}
 .prima_parte{
     height: 1268px;
 }
@@ -321,17 +436,13 @@ canvas{
 }
 .parte_doi{
     text-align: center;
-    position: absolute;
+    bottom: 0%;
     width: 100%;
-    height: 218px;
+    height: 20%;
 }
 .placeholder{
     font-size: 30px;
     text-align: center;
-}
-#varsta{
-    height: 300px;
-    width: 400px;
 }
 .DisplayAge{
     color: white;
@@ -347,13 +458,6 @@ canvas{
 }
 #minutes{
     margin-left: 5px;
-}
-.old{
-    height: 40px;
-    width: 260px;
-    font-size: 25px;
-    margin-top: 14px;
-    border-radius: 20px;
 }
 .text{
     font-style: italic;
