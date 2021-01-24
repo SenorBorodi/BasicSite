@@ -25,10 +25,10 @@ div.parte_cedry2k {
         opacity:0;
     }
     50%{
-        opacity:1;
+        opacity:0.7;
     }
     70%{
-        opacity:1;
+        opacity:0.5;
     }
     100%{
         transform: translateY(-80vh);
@@ -59,17 +59,26 @@ div.parte_cedry2k {
     width: 20px;
 }
 .animation img:nth-child(7){
-    animation-delay: 7s;
+    animation-delay: 5s;
 }
 .animation img:nth-child(8){
-    width: 35px;
-    animation-delay: 9s;
+    width: 30px;
+    animation-delay: 4s;
+}
+.animation img:nth-child(9){
+    width: 20px;
+    animation-delay: 7s;
+}
+.animation img:nth-child(10){
+    width: 25px;
+    animation-delay: 2s;
 }
 body{
     margin:0px;
     font-family: tahoma;
 }
 .vid{
+    border-radius: 20px;
     margin-left: auto;
     margin-right: auto;
     display: block;
@@ -159,6 +168,8 @@ nav{
     float: right;
 }
 .info{
+    font-style: italic;
+    font-stretch: b;
     font-size: 23px;
 }
 nav ul{
@@ -204,6 +215,7 @@ nav a:hover::before{
     opacity: 0;
 }
 #GameCanvas{
+    border-radius: 25px;
     width: 54%;
     height: 70%;
     margin-top: 3%;
@@ -213,6 +225,7 @@ nav a:hover::before{
     left: 430px;
 }
 #ScoreCanvas{
+    border-radius: 15px;
     margin-top: 15px;
     width: 8%;
     height: 8%;
@@ -230,12 +243,14 @@ nav a:hover::before{
     display: none;
 }
 .poza{
+  border-radius: 20px;
     height: 600px;
     width: 500px;
     border: 3px solid white;
 }
 .eu{
     height: 600px;
+    border-radius: 20px;
     border: 3px solid white;
 }
 @media screen and (max-width:1092px){
@@ -385,7 +400,7 @@ nav a:hover::before{
     position:absolute;
     right: 50px;
     display: block;
-    transform: translateX(-7.5%);
+    transform: translateX(-10.7%);
 }
 #buton{
     width: 220px;
@@ -420,10 +435,7 @@ canvas{
 }
 .links{
     bottom: 0%;
-    position: absolute;
-}
-.links{
-    justify-content: center;
+    position: absolute;;
 }
 .prima_parte{
     height: 1268px;
