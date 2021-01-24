@@ -58,7 +58,14 @@ function age(){
 
     document.getElementById("seconds").value = (age * 12 * 30 * 24 * 60 * 60) + " " +"Seconds";   
 }
+var running = 0;
+var bounce = 0;
 function game(){
+    if(bounce == 1)
+        return
+    running = 1; 
+
+
     const cvs = document.getElementById("GameCanvas");
     const ctx = cvs.getContext("2d");
     
@@ -213,6 +220,9 @@ function game(){
     requestAnimationFrame(main);
 }
 function GameMadeByMe(){
+    if(running)
+        return;
+    bounce = 1;
     var canvas = document.getElementById("GameCanvas");
     var ctx = canvas.getContext("2d");
     var ballRadius = 6;
@@ -377,5 +387,3 @@ function GameMadeByMe(){
     
     var interval = setInterval(draw, 10);
 }
-
-/*https://developer.mozilla.org/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field#setting_up_the_brick_variables*/
